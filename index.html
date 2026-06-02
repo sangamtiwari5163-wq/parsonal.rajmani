@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<title>Rajmani Tiwari — Logistics Operations Executive & Self-Taught Automation Explorer</title>
+<meta name="description" content="Portfolio of Rajmani Tiwari — Logistics Operations Executive at Joy Logistics Exim and self-taught automation explorer. Builds personal Electron apps and no-code workflows with AI assistance."/>
+
+<!-- ============================================================
+     Open Graph + Twitter Card meta tags
+     These create the rich preview card when this URL is shared on
+     LinkedIn, WhatsApp, Twitter/X, Facebook, Slack, Discord, etc.
+     The og:image must be a publicly accessible URL (uploaded to
+     your Netlify site). 1200×627 is the LinkedIn/Twitter sweet spot.
+     ============================================================ -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://rajmani-tiwari.netlify.app/"/>
+<meta property="og:title" content="Rajmani Tiwari — Logistics Operations Executive & Self-Taught Builder"/>
+<meta property="og:description" content="7+ years in logistics operations at Joy Logistics Exim & Surgeet Logistics. After-hours: Electron desktop apps and Make.com automations built with AI assistance. Domestic + international freight experience."/>
+<meta property="og:image" content="https://rajmani-tiwari.netlify.app/og-cover-v2.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="627"/>
+<meta property="og:image:alt" content="Rajmani Tiwari — Portfolio. Logistics Operations Executive and self-taught automation builder."/>
+<meta property="og:site_name" content="Rajmani Tiwari"/>
+<meta property="og:locale" content="en_IN"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Rajmani Tiwari — Logistics Ops & Self-Taught Builder"/>
+<meta name="twitter:description" content="7+ years in logistics operations. After-hours: Electron apps and Make.com automations built with AI assistance."/>
+<meta name="twitter:image" content="https://rajmani-tiwari.netlify.app/og-cover-v2.jpg"/>
+
+<!-- Tailwind via CDN -->
+<!-- Tailwind CSS via CDN with onerror fallback to backup CDN -->
+<script src="https://cdn.tailwindcss.com" onerror="this.onerror=null;var s=document.createElement('script');s.src='https://unpkg.com/@tailwindcss/browser@4';document.head.appendChild(s);"></script>
+
+<!-- Native browser print is used for PDF export — works on all devices including mobile -->
+
+<!-- Fonts: distinctive serif display + clean grotesk body + mono accent -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script>
+  // Tailwind config — guarded so the page still loads if the CDN is blocked
+  // (slow networks, content:// file viewers, restrictive firewalls all
+  // sometimes block cdn.tailwindcss.com). Without this guard, the page
+  // crashes with "tailwind is not defined" and the Download PDF button
+  // never works.
+  if (typeof tailwind !== 'undefined') {
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: {
+              950: '#05070F',
+              900: '#0A0F1F',
+              850: '#0F1729',
+              800: '#131C33',
+              700: '#1B2742',
+              600: '#243453',
+            },
+            accent: {
+              DEFAULT: '#3B82F6',
+              bright: '#22D3EE',
+              electric: '#06B6D4',
+              soft: '#67E8F9',
+              glow: '#0EA5E9',
+              violet: '#A78BFA',
+            },
+            paper: '#F7F5F0',
+          },
+          fontFamily: {
+            display: ['Fraunces', 'serif'],
+            sans: ['Geist', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    };
+  } else {
+    console.warn('Tailwind CDN failed to load. Using fallback styles. PDF download will still work.');
+  }
+</script>
+
+<style>
+  /* ===== NO-TAILWIND FALLBACK STYLES =====
+   * If Tailwind CDN fails to load (slow network, content:// viewer,
+   * blocked domain), the page would otherwise be totally unstyled and
+   * the Download PDF button hard to find. These rules provide the
+   * bare minimum so the page is usable: dark background, visible
+   * buttons, readable text, and a styled resume sheet.
+   * When Tailwind IS loaded, its utility classes override these. */
+  body {
+    background: #05070F;
+    color: #e2e8f0;
+    margin: 0;
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  }
+  a { color: #22D3EE; }
+  button {
+    background: #22D3EE;
+    color: #0F172A;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  button:hover { background: #06B6D4; }
+  /* Resume sheet always white with dark text, regardless of Tailwind */
+  #resume-sheet {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    padding: 32px 24px;
+    border-radius: 8px;
+    max-width: 850px;
+    margin: 20px auto;
+  }
+  #resume-sheet h1, #resume-sheet h2, #resume-sheet h3 { color: #0f172a; }
+  #resume-sheet p, #resume-sheet li, #resume-sheet div { color: #334155; }
+  /* Download button extra-visible as fallback */
+  #downloadBtn {
+    background: linear-gradient(135deg, #22D3EE, #06B6D4);
+    color: #0F172A;
+    font-weight: 700;
+    padding: 12px 22px;
+    box-shadow: 0 4px 14px rgba(34, 211, 238, 0.4);
+  }
+  /* ===== END FALLBACK STYLES ===== */
+
+  :root {
+    --grid-line: rgba(148, 163, 184, 0.05);
+    --cyan: #22D3EE;
+    --cyan-glow: #06B6D4;
+    --violet: #A78BFA;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Geist', system-ui, sans-serif;
+    background: #05070F;
+    color: #E2E8F0;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* === FIX FOR HEADER OVERLAP (every section) ===
+     The fixed header is 68px on mobile, 64px on >=sm. The browser anchors
+     scroll to a section's top edge — which lands BEHIND the fixed bar.
+     scroll-margin-top offsets that anchor so the heading is always visible
+     below the bar (the resume section "Rajmani Tiwari" was getting clipped). */
+  section[id], main[id] {
+    scroll-margin-top: 96px;
+  }
+  @media (min-width: 640px) {
+    section[id], main[id] { scroll-margin-top: 84px; }
+  }
+
+  /* Subtle grid background */
+  .bg-grid {
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  }
+
+  /* Premium aurora glow with animation */
+  .glow-radial {
+    background:
+      radial-gradient(60% 50% at 20% 10%, rgba(34, 211, 238, 0.18) 0%, transparent 60%),
+      radial-gradient(40% 40% at 90% 30%, rgba(167, 139, 250, 0.12) 0%, transparent 60%),
+      radial-gradient(60% 60% at 50% 100%, rgba(6, 182, 212, 0.10) 0%, transparent 60%);
+  }
+
+  @keyframes aurora-float {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 1; }
+    33% { transform: translate(30px, -20px) scale(1.05); opacity: 0.9; }
+    66% { transform: translate(-20px, 25px) scale(0.95); opacity: 0.95; }
+  }
+  .aurora-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    pointer-events: none;
+    animation: aurora-float 14s ease-in-out infinite;
+  }
+  .aurora-1 {
+    width: 380px; height: 380px;
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.35), transparent 70%);
+    top: -120px; left: -100px;
+  }
+  .aurora-2 {
+    width: 420px; height: 420px;
+    background: radial-gradient(circle, rgba(167, 139, 250, 0.25), transparent 70%);
+    top: 20%; right: -180px;
+    animation-delay: -5s;
+  }
+  .aurora-3 {
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.30), transparent 70%);
+    bottom: -100px; left: 30%;
+    animation-delay: -9s;
+  }
+  @media (min-width: 768px) {
+    .aurora-1 { width: 480px; height: 480px; }
+    .aurora-2 { width: 520px; height: 520px; }
+    .aurora-3 { width: 380px; height: 380px; }
+  }
+
+  /* Noise texture */
+  .noise::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>");
+    opacity: 0.035;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+
+  /* Reveal animations — SAFE VERSION
+   * Old version had opacity:0 by default and relied on JS IntersectionObserver
+   * to set opacity:1. If JS failed or ran late on mobile, content stayed
+   * permanently invisible. New approach: content is visible by default,
+   * animation only enhances when JS opts in by adding 'reveal-anim' class. */
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  /* Only when JS explicitly enables animation, start hidden and fade in */
+  .reveal-anim:not(.in) {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  .reveal-anim {
+    transition: opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1);
+  }
+  .reveal-anim.in { opacity: 1; transform: none; }
+
+  /* Marquee */
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .marquee-track { animation: marquee 38s linear infinite; }
+
+  /* Hero number ticker */
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
+    50% { opacity: .5; transform: scale(.85); box-shadow: 0 0 0 6px rgba(52, 211, 153, 0); }
+  }
+  .pulse-dot { animation: pulse-dot 1.8s ease-in-out infinite; }
+
+  /* Card hover with shine */
+  .card-tilt {
+    position: relative;
+    transition: transform .5s cubic-bezier(.2,.7,.2,1), border-color .35s, background .35s, box-shadow .4s;
+  }
+  .card-tilt:hover {
+    transform: translateY(-6px);
+    border-color: rgba(34, 211, 238, 0.5);
+    background: linear-gradient(180deg, rgba(15,23,41,0.95) 0%, rgba(10,15,31,0.95) 100%);
+    box-shadow:
+      0 25px 50px -20px rgba(34, 211, 238, 0.25),
+      0 0 0 1px rgba(34, 211, 238, 0.15);
+  }
+  .card-tilt::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(34, 211, 238, 0.0) 40%, rgba(34, 211, 238, 0.06) 50%, rgba(34, 211, 238, 0.0) 60%);
+    opacity: 0;
+    transition: opacity .5s;
+    pointer-events: none;
+  }
+  .card-tilt:hover::after { opacity: 1; }
+
+  /* Accent underline link */
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -6px;
+    height: 1px; width: 0;
+    background: linear-gradient(90deg, #22D3EE, #A78BFA);
+    transition: width .35s ease;
+  }
+  .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+  /* Editable indicator */
+  [contenteditable="true"] {
+    outline: none;
+    background: rgba(34, 211, 238, 0.10);
+    border-bottom: 1px dashed rgba(34, 211, 238, 0.55);
+    padding: 1px 4px;
+    border-radius: 2px;
+    transition: background .2s;
+  }
+  [contenteditable="true"]:focus {
+    background: rgba(34, 211, 238, 0.18);
+    border-bottom-color: #22D3EE;
+  }
+
+  /* Resume sheet — printed CV with subtle premium feel */
+  .resume-sheet {
+    background: #FFFFFF;
+    color: #0F172A;
+    font-family: 'Geist', sans-serif;
+    box-shadow:
+      0 40px 80px -20px rgba(0,0,0,0.7),
+      0 0 0 1px rgba(255,255,255,0.05),
+      0 0 60px -20px rgba(34, 211, 238, 0.25);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  .resume-sheet h1, .resume-sheet h2, .resume-sheet h3 {
+    font-family: 'Fraunces', serif;
+  }
+
+  /* PDF render mode — Hard reset to guaranteed dark text + white background.
+     This is the FIX for the blank PDF bug: html2canvas can fail to interpret
+     Tailwind utility colors, CSS vars, and modern color functions reliably.
+     We force concrete inline-equivalent styles for the export clone. */
+  .pdf-render {
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+  .pdf-render * {
+    color: #1a202c !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-text-fill-color: #1a202c !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+  .pdf-render h1, .pdf-render h2, .pdf-render h3,
+  .pdf-render h4, .pdf-render h5, .pdf-render h6 {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    font-family: 'Fraunces', Georgia, serif !important;
+  }
+  /* Section headings keep a slate-dark tone for accent without fancy colors */
+  .pdf-render section > h2 {
+    color: #1e3a8a !important;
+    -webkit-text-fill-color: #1e3a8a !important;
+  }
+  .pdf-render [contenteditable] {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    outline: none !important;
+  }
+  .pdf-render .no-pdf { display: none !important; }
+  .pdf-render header {
+    border-bottom: 2px solid #0f172a !important;
+  }
+  .pdf-render .border-t { border-top-color: #cbd5e1 !important; }
+  .pdf-render .border-b-2 { border-bottom-color: #0f172a !important; }
+
+  /* Mobile menu — solid background covers nothing behind it */
+  .mobile-menu {
+    transform: translateY(-110%);
+    transition: transform .45s cubic-bezier(.2,.7,.2,1);
+  }
+  .mobile-menu.open { transform: translateY(0); }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: #0A0F1F; }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #22D3EE, #06B6D4);
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #67E8F9, #22D3EE); }
+
+  /* Number display */
+  .stat-number {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    font-variant-numeric: tabular-nums;
+    background: linear-gradient(180deg, #FFFFFF 0%, #67E8F9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Section label */
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #22D3EE;
+  }
+  .section-label::before {
+    content: "";
+    width: 28px; height: 1px;
+    background: linear-gradient(90deg, #22D3EE, transparent);
+  }
+
+  /* Tag chip */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border: 1px solid rgba(148,163,184,0.16);
+    border-radius: 999px;
+    background: rgba(15, 23, 41, 0.6);
+    font-size: 12.5px;
+    color: #CBD5E1;
+    transition: all .25s;
+  }
+  .chip:hover {
+    border-color: rgba(34, 211, 238, 0.55);
+    color: #F8FAFC;
+    background: rgba(15, 23, 41, 0.9);
+    box-shadow: 0 0 12px -2px rgba(34, 211, 238, 0.3);
+  }
+
+  /* Premium primary button with shine */
+  .btn-primary {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #22D3EE 0%, #06B6D4 100%);
+    color: #05070F;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all .3s;
+    overflow: hidden;
+    box-shadow: 0 8px 24px -8px rgba(34, 211, 238, 0.5);
+  }
+  .btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left .6s;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 38px -10px rgba(34, 211, 238, 0.65);
+  }
+  .btn-primary:hover::before { left: 100%; }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    border: 1px solid rgba(148,163,184,0.24);
+    color: #E2E8F0;
+    border-radius: 8px;
+    transition: all .3s;
+    background: rgba(15,23,41,0.4);
+    backdrop-filter: blur(6px);
+  }
+  .btn-ghost:hover {
+    border-color: #22D3EE;
+    color: #22D3EE;
+    background: rgba(34, 211, 238, 0.08);
+    transform: translateY(-2px);
+  }
+
+  /* Print */
+  /* ============================================================
+   * PRINT STYLES — Native browser PDF export.
+   *
+   * Triggered by the "Download PDF" button (calls window.print()).
+   * The user picks "Save as PDF" in their browser's print dialog.
+   * Works on every device: Chrome / Firefox / Safari / Edge,
+   * desktop AND mobile (Chrome Android, iOS Safari).
+   *
+   * Single-page target: 8mm margins + reduced font-sizes + tight
+   * spacing in print mode so the full resume fits on ONE A4 page.
+   * ============================================================ */
+  @page {
+    size: A4 portrait;
+    margin: 8mm;
+  }
+
+  @media print {
+    /* Force A4 regardless of browser default (some Android browsers
+       default to Letter — we override at the document level too). */
+    html, body {
+      background: #ffffff !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 210mm !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    body * { visibility: hidden !important; }
+
+    /* Show only the resume sheet and its contents */
+    #resume-sheet, #resume-sheet * {
+      visibility: visible !important;
+    }
+
+    /* Position the sheet at the top-left of the printed page.
+       width:194mm = 210mm A4 - 16mm (8mm margin × 2). */
+    #resume-sheet {
+      position: absolute !important;
+      left: 0 !important;
+      top: 0 !important;
+      width: 194mm !important;
+      max-width: 194mm !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: #ffffff !important;
+      color: #000000 !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      transform: none !important;
+      filter: none !important;
+      /* Tighter base font-size so everything scales down */
+      font-size: 10.5pt !important;
+      line-height: 1.35 !important;
+    }
+
+    /* Force all text inside the sheet to dark, readable colors —
+       Tailwind utility colors / oklch / gradients can render weirdly
+       in print, so we hard-reset to concrete hex values. */
+    #resume-sheet * {
+      background: transparent !important;
+      background-image: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+      filter: none !important;
+      animation: none !important;
+      transition: none !important;
+      color: #1e293b !important;
+      -webkit-text-fill-color: #1e293b !important;
+    }
+
+    /* ===== SINGLE-PAGE FIT: scale down sizes & spacing ===== */
+    /* Name (h1) — was 36-48px, shrink to ~22pt */
+    #resume-sheet h1 {
+      font-size: 22pt !important;
+      line-height: 1.05 !important;
+      margin: 0 !important;
+    }
+    /* Section labels (Profile, Experience, etc.) */
+    #resume-sheet section > h2 {
+      font-size: 9pt !important;
+      letter-spacing: 0.15em !important;
+      margin: 0 0 4pt 0 !important;
+      color: #1e40af !important;
+      -webkit-text-fill-color: #1e40af !important;
+    }
+    /* Job titles, project titles, edu titles (h3 + bold rows) */
+    #resume-sheet h3,
+    #resume-sheet .font-semibold {
+      font-size: 10.5pt !important;
+      line-height: 1.2 !important;
+    }
+    /* Body paragraphs */
+    #resume-sheet p {
+      font-size: 9.5pt !important;
+      line-height: 1.35 !important;
+      margin: 1.5pt 0 !important;
+    }
+    /* List items (skills) */
+    #resume-sheet li {
+      font-size: 9.5pt !important;
+      line-height: 1.45 !important;
+      margin: 0 !important;
+    }
+    /* Contact info top-right */
+    #resume-sheet header [style*="JetBrains"] {
+      font-size: 9pt !important;
+    }
+    /* Date stamps */
+    #resume-sheet .font-mono,
+    #resume-sheet [class*="text-[12px]"] {
+      font-size: 8.5pt !important;
+    }
+
+    /* Force header into row layout even when printing from mobile,
+       so contact info sits beside the name (saves a lot of vertical space). */
+    #resume-sheet header {
+      flex-direction: row !important;
+      align-items: flex-end !important;
+      justify-content: space-between !important;
+      padding-bottom: 8pt !important;
+      margin-bottom: 8pt !important;
+    }
+    #resume-sheet header > div:last-child {
+      text-align: right !important;
+    }
+    /* Two-column resume body: force experience/skills side-by-side in print */
+    #resume-sheet .grid {
+      display: grid !important;
+      grid-template-columns: 2fr 1fr !important;
+      gap: 14pt !important;
+    }
+    #resume-sheet .sm\:col-span-2 {
+      grid-column: span 1 / span 1 !important;
+    }
+    #resume-sheet section {
+      margin-top: 8pt !important;
+    }
+    #resume-sheet .mt-7 { margin-top: 8pt !important; }
+    #resume-sheet .mt-3 { margin-top: 3pt !important; }
+    #resume-sheet .mb-3 { margin-bottom: 3pt !important; }
+    #resume-sheet .space-y-1\.5 > * + * { margin-top: 1pt !important; }
+    #resume-sheet .space-y-4 > * + * { margin-top: 6pt !important; }
+    #resume-sheet .gap-5 { gap: 6pt !important; }
+
+    /* Borders: explicit dark slate */
+    #resume-sheet header,
+    #resume-sheet .border-b-2 {
+      border-bottom-color: #1e293b !important;
+    }
+    #resume-sheet .border-t {
+      border-top-color: #94a3b8 !important;
+    }
+
+    /* Editable fields render as plain text in print */
+    #resume-sheet [contenteditable] {
+      background: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+      outline: none !important;
+    }
+
+    /* Hide anything tagged not-for-print */
+    .no-pdf, .no-print { display: none !important; }
+
+    /* Prevent awkward page breaks inside sections */
+    #resume-sheet section,
+    #resume-sheet header {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+  }
+
+  /* Timeline */
+  .timeline-line {
+    background: linear-gradient(180deg, rgba(34, 211, 238, 0.7) 0%, rgba(34, 211, 238, 0.25) 50%, rgba(34, 211, 238, 0.05) 100%);
+    box-shadow: 0 0 12px rgba(34, 211, 238, 0.4);
+  }
+
+  /* Glow text */
+  .glow-text {
+    text-shadow: 0 0 28px rgba(34, 211, 238, 0.4);
+  }
+
+  /* Gradient heading underline accent */
+  .accent-underline {
+    background: linear-gradient(120deg, transparent 0%, transparent 30%, rgba(34, 211, 238, 0.25) 50%, transparent 70%, transparent 100%);
+    background-position: 0 88%;
+    background-size: 100% 12px;
+    background-repeat: no-repeat;
+  }
+
+  /* Mobile-friendly: header brand stays visible */
+  @media (max-width: 380px) {
+    .brand-subtitle { display: none; }
+  }
+
+  /* Mobile word-wrap safety on long unspaced text */
+  .safe-wrap {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+</style>
+</head>
+<body class="bg-ink-950">
+
+<!-- ============== TOP NAV ============== -->
+<header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-ink-950/80 border-b border-white/[0.06]" style="padding-top: calc(env(safe-area-inset-top, 0px) + 28px);">
+  <!-- Subtle accent line on top -->
+  <div class="h-px w-full bg-gradient-to-r from-transparent via-accent-bright/40 to-transparent"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-[68px] sm:h-16 flex items-center justify-between gap-3">
+    <a href="#top" class="flex items-center gap-2.5 group min-w-0 flex-shrink">
+      <div class="relative w-10 h-10 sm:w-9 sm:h-9 rounded-lg bg-gradient-to-br from-accent-bright via-accent-electric to-accent-glow flex items-center justify-center font-display font-bold text-ink-950 text-lg shadow-lg shadow-accent-bright/30 flex-shrink-0">
+        R
+        <span class="absolute -inset-0.5 rounded-lg bg-gradient-to-br from-accent-bright/40 to-accent-violet/40 blur-md -z-10 opacity-60"></span>
+      </div>
+      <div class="leading-tight min-w-0">
+        <div class="font-display text-[15px] font-semibold text-white tracking-tight truncate">Rajmani Tiwari</div>
+        <div class="brand-subtitle font-mono text-[10px] text-slate-400 tracking-wider uppercase truncate">Ops · Self-Taught Builder</div>
+      </div>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-9 text-sm text-slate-300">
+      <a href="#about" class="nav-link hover:text-white transition">About</a>
+      <a href="#experience" class="nav-link hover:text-white transition">Experience</a>
+      <a href="#projects" class="nav-link hover:text-white transition">Projects</a>
+      <a href="#skills" class="nav-link hover:text-white transition">Skills</a>
+      <a href="#resume" class="nav-link hover:text-white transition">Resume</a>
+      <a href="#contact" class="nav-link hover:text-white transition">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+      <!-- Desktop full button -->
+      <a href="#resume" class="hidden md:inline-flex btn-primary text-sm !py-2 !px-4">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+        Resume
+      </a>
+      <!-- Mobile icon-only button -->
+      <a href="#resume" class="md:hidden w-10 h-10 grid place-items-center rounded-lg bg-gradient-to-br from-accent-bright to-accent-electric text-ink-950 shadow-lg shadow-accent-bright/30" aria-label="View Resume">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      </a>
+      <button id="menuBtn" class="lg:hidden w-10 h-10 grid place-items-center rounded-lg border border-white/10 text-white hover:border-accent-bright transition" aria-label="Menu">
+        <svg id="menuIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- mobile menu -->
+  <div id="mobileMenu" class="mobile-menu lg:hidden absolute top-[68px] sm:top-16 left-0 right-0 bg-ink-950/95 backdrop-blur-xl border-b border-white/[0.06] px-6 py-7 space-y-1">
+    <a href="#about" class="flex items-center justify-between text-slate-200 py-3 border-b border-white/5 hover:text-accent-bright transition">
+      <span>About</span>
+      <span class="font-mono text-[10px] text-slate-500">01</span>
+    </a>
+    <a href="#experience" class="flex items-center justify-between text-slate-200 py-3 border-b border-white/5 hover:text-accent-bright transition">
+      <span>Experience</span>
+      <span class="font-mono text-[10px] text-slate-500">02</span>
+    </a>
+    <a href="#projects" class="flex items-center justify-between text-slate-200 py-3 border-b border-white/5 hover:text-accent-bright transition">
+      <span>Projects</span>
+      <span class="font-mono text-[10px] text-slate-500">03</span>
+    </a>
+    <a href="#skills" class="flex items-center justify-between text-slate-200 py-3 border-b border-white/5 hover:text-accent-bright transition">
+      <span>Skills</span>
+      <span class="font-mono text-[10px] text-slate-500">04</span>
+    </a>
+    <a href="#resume" class="flex items-center justify-between text-slate-200 py-3 border-b border-white/5 hover:text-accent-bright transition">
+      <span>Resume</span>
+      <span class="font-mono text-[10px] text-slate-500">05</span>
+    </a>
+    <a href="#contact" class="flex items-center justify-between text-slate-200 py-3 hover:text-accent-bright transition">
+      <span>Contact</span>
+      <span class="font-mono text-[10px] text-slate-500">06</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============== HERO ============== -->
+<!-- FIX: Mobile fixed-header overlap — explicit mobile-first padding so the
+     "Logistics by day…" heading and meta-strip never hide behind the sticky bar. -->
+<section id="home" class="relative pt-36 sm:pt-40 md:pt-44 lg:pt-48 pb-20 sm:pb-28 overflow-hidden">
+  <!-- Animated aurora background -->
+  <div class="aurora-blob aurora-1"></div>
+  <div class="aurora-blob aurora-2"></div>
+  <div class="aurora-blob aurora-3"></div>
+
+  <div class="absolute inset-0 bg-grid"></div>
+  <div class="absolute inset-0 glow-radial"></div>
+  <div class="absolute inset-0 noise"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+    <!-- meta strip -->
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 mb-8 sm:mb-10 reveal">
+      <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-400/20">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 pulse-dot"></span>
+        <span class="font-mono text-[10px] sm:text-xs text-emerald-300 uppercase tracking-widest">At Joy Logistics Exim · New Delhi</span>
+      </div>
+      <div class="font-mono text-xs text-slate-500 uppercase tracking-widest hidden sm:block">Portfolio · 2026</div>
+      <div class="font-mono text-xs text-slate-500 uppercase tracking-widest hidden md:block">Operations · Hobbyist Builder</div>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+      <div class="lg:col-span-8 reveal">
+        <h1 class="font-display font-medium text-white leading-[1.02] sm:leading-[0.95] tracking-tight text-4xl sm:text-6xl md:text-7xl lg:text-[88px] glow-text safe-wrap">
+          Logistics by day,<br>
+          <span class="italic bg-gradient-to-r from-accent-bright via-accent-soft to-accent-violet bg-clip-text text-transparent">&amp; tinkering with code</span><br>
+          after hours.
+        </h1>
+        <p class="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl leading-relaxed safe-wrap">
+          I'm <span class="text-white font-medium">Rajmani Tiwari</span> — a Logistics Operations Executive and a self-taught automation explorer. I work in a standard operations role, but in my personal time I passionately build small desktop apps and no-code workflows using AI assistance, just to learn and to solve real problems I see at work.
+        </p>
+
+        <div class="mt-8 sm:mt-10 flex flex-wrap gap-3">
+          <a href="#resume" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            View &amp; Download Resume
+          </a>
+          <a href="#projects" class="btn-ghost">
+            Explore Projects
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- right stats panel -->
+      <div class="lg:col-span-4 reveal">
+        <div class="relative rounded-2xl border border-white/10 bg-gradient-to-br from-ink-900/80 to-ink-850/50 backdrop-blur-md p-6 overflow-hidden">
+          <!-- gradient border glow -->
+          <div class="absolute -top-px left-6 right-6 h-px bg-gradient-to-r from-transparent via-accent-bright to-transparent"></div>
+          <div class="absolute -bottom-px left-6 right-6 h-px bg-gradient-to-r from-transparent via-accent-violet/40 to-transparent"></div>
+          <!-- corner accent -->
+          <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-accent-bright/15 to-transparent rounded-bl-full pointer-events-none"></div>
+
+          <div class="flex items-center justify-between mb-5">
+            <div class="section-label !text-[10px]">Career Snapshot</div>
+            <div class="font-mono text-[10px] text-slate-500">v.2026.01</div>
+          </div>
+
+          <div class="space-y-5">
+            <div class="flex items-baseline justify-between border-b border-white/5 pb-4">
+              <div>
+                <div class="stat-number text-5xl">07<span class="text-accent-bright">+</span></div>
+                <div class="text-xs text-slate-400 mt-1">Years in Logistics Ops</div>
+              </div>
+              <div class="font-mono text-[10px] text-slate-500">2019→</div>
+            </div>
+            <div class="flex items-baseline justify-between border-b border-white/5 pb-4">
+              <div>
+                <div class="stat-number text-5xl">04</div>
+                <div class="text-xs text-slate-400 mt-1">Personal Builds</div>
+              </div>
+              <div class="font-mono text-[10px] text-slate-500">AI-assisted</div>
+            </div>
+            <div class="flex items-baseline justify-between">
+              <div>
+                <div class="stat-number text-5xl">02</div>
+                <div class="text-xs text-slate-400 mt-1">Languages Fluent</div>
+              </div>
+              <div class="font-mono text-[10px] text-slate-500">HI · EN</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- marquee -->
+  <div class="mt-16 sm:mt-24 lg:mt-28 relative border-y border-white/5 py-5 overflow-hidden">
+    <div class="flex whitespace-nowrap marquee-track">
+      <div class="flex items-center gap-12 px-6 font-display italic text-2xl sm:text-3xl text-slate-500">
+        <span>Logistics Operations</span><span class="text-accent-bright">✦</span>
+        <span>Freight Forwarding</span><span class="text-accent-bright">✦</span>
+        <span>Dispatch &amp; Coordination</span><span class="text-accent-bright">✦</span>
+        <span>AI-Assisted Coding</span><span class="text-accent-bright">✦</span>
+        <span>Electron Apps</span><span class="text-accent-bright">✦</span>
+        <span>Make.com Automation</span><span class="text-accent-bright">✦</span>
+        <span>Self-Taught Builder</span><span class="text-accent-bright">✦</span>
+      </div>
+      <div class="flex items-center gap-12 px-6 font-display italic text-2xl sm:text-3xl text-slate-500" aria-hidden="true">
+        <span>Logistics Operations</span><span class="text-accent-bright">✦</span>
+        <span>Freight Forwarding</span><span class="text-accent-bright">✦</span>
+        <span>Dispatch &amp; Coordination</span><span class="text-accent-bright">✦</span>
+        <span>AI-Assisted Coding</span><span class="text-accent-bright">✦</span>
+        <span>Electron Apps</span><span class="text-accent-bright">✦</span>
+        <span>Make.com Automation</span><span class="text-accent-bright">✦</span>
+        <span>Self-Taught Builder</span><span class="text-accent-bright">✦</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ABOUT ============== -->
+<section id="about" class="relative py-20 sm:py-28 lg:py-32">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-20">
+      <div class="lg:col-span-4 reveal">
+        <div class="section-label mb-6">01 / About</div>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white leading-[1.1] tracking-tight safe-wrap">
+          A standard ops role, <span class="italic bg-gradient-to-r from-accent-bright to-accent-violet bg-clip-text text-transparent">a curious mind after hours.</span>
+        </h2>
+      </div>
+      <div class="lg:col-span-8 reveal">
+        <div class="space-y-5 text-base sm:text-lg text-slate-300 leading-relaxed safe-wrap">
+          <p>By day I work as a Logistics Operations Executive — handling dispatch, documentation, and the everyday coordination that keeps cargo moving. It's a standard operations role, and I do it well.</p>
+          <p>After hours is where things get interesting. I'm a self-taught hobbyist who uses AI as a coding co-pilot to build small Electron desktop apps and no-code Make.com workflows in my personal time. <span class="text-white">These are independent personal projects — built to learn, and to solve real pain points I notice at work. No CS degree, no bootcamp; just a passionate explorer who treats every operational annoyance as something worth tinkering with.</span></p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5 mt-10 sm:mt-12">
+          <div class="rounded-2xl border border-white/10 bg-ink-900/40 backdrop-blur-sm p-6">
+            <div class="font-mono text-[11px] text-accent-bright uppercase tracking-widest mb-3">Education</div>
+            <div class="text-white font-medium text-lg leading-snug">B.A. Graduate</div>
+            <div class="text-slate-400 text-sm mt-1">10th (2010) · 12th Science PCM (2012) · B.A. (2012–2015)</div>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-ink-900/40 backdrop-blur-sm p-6">
+            <div class="font-mono text-[11px] text-accent-bright uppercase tracking-widest mb-3">Mindset</div>
+            <div class="text-white font-medium text-lg leading-snug">Curious · Self-Taught · Patient</div>
+            <div class="text-slate-400 text-sm mt-1">Learning in personal time</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== EXPERIENCE TIMELINE ============== -->
+<section id="experience" class="relative py-20 sm:py-28 lg:py-32 border-t border-white/5">
+  <div class="absolute inset-0 bg-grid opacity-50"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 sm:mb-16 reveal">
+      <div>
+        <div class="section-label mb-6">02 / Experience</div>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white leading-[1.1] tracking-tight safe-wrap">
+          Seven years in <span class="italic bg-gradient-to-r from-accent-bright to-accent-violet bg-clip-text text-transparent">operations.</span>
+        </h2>
+      </div>
+      <div class="font-mono text-xs text-slate-500 uppercase tracking-widest">
+        2019 ────────── Present
+      </div>
+    </div>
+
+    <div class="relative grid md:grid-cols-2 gap-6 lg:gap-10">
+      <!-- vertical line -->
+      <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px timeline-line -translate-x-1/2"></div>
+
+      <!-- Job 1 -->
+      <div class="reveal md:pr-12">
+        <div class="relative rounded-2xl border border-white/10 bg-ink-900/60 backdrop-blur-sm p-6 sm:p-7 card-tilt">
+          <div class="absolute -right-3.5 top-8 hidden md:grid w-7 h-7 rounded-full bg-ink-950 border border-accent-bright/60 place-items-center">
+            <div class="w-2 h-2 rounded-full bg-accent-bright"></div>
+          </div>
+          <div class="font-mono text-xs text-accent-bright tracking-widest mb-3">2019 — 2024 · 5 Years</div>
+          <h3 class="font-display text-xl sm:text-2xl text-white leading-tight safe-wrap">Logistics Operations Executive</h3>
+          <div class="text-slate-400 text-sm mt-1 mb-5 safe-wrap">Surgeet Logistics · Kanpur</div>
+          <p class="text-slate-300 leading-relaxed safe-wrap">A small state-level domestic logistics company. Managed local cargo movements and dispatch coordination — the day-to-day groundwork that gave me deep operational fluency and a clear view of the small inefficiencies worth automating later.</p>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="chip">Dispatch</span>
+            <span class="chip">Local Movements</span>
+            <span class="chip">Coordination</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- spacer -->
+      <div class="hidden md:block"></div>
+      <div class="hidden md:block"></div>
+
+      <!-- Job 2 -->
+      <div class="reveal md:pl-12">
+        <div class="relative rounded-2xl border border-accent-bright/40 bg-gradient-to-br from-ink-900/80 to-ink-850/80 backdrop-blur-sm p-6 sm:p-7 card-tilt shadow-2xl shadow-accent-bright/10">
+          <div class="absolute -left-3.5 top-8 hidden md:grid w-7 h-7 rounded-full bg-ink-950 border border-accent-bright place-items-center">
+            <div class="w-2 h-2 rounded-full bg-accent-bright pulse-dot"></div>
+          </div>
+          <div class="flex items-center gap-3 mb-3 flex-wrap">
+            <div class="font-mono text-xs text-accent-bright tracking-widest">2024 — Present</div>
+            <span class="px-2 py-0.5 rounded-full bg-emerald-400/15 text-emerald-300 text-[10px] font-mono uppercase tracking-widest">Current</span>
+          </div>
+          <h3 class="font-display text-xl sm:text-2xl text-white leading-tight safe-wrap">Operations Executive</h3>
+          <div class="text-slate-400 text-sm mt-1 mb-5 safe-wrap">Joy Logistics Exim (India) Pvt. Ltd. · New Delhi</div>
+          <p class="text-slate-300 leading-relaxed safe-wrap">Handling international freight forwarding and day-to-day operations support. The exposure to global shipping documentation is where I get most of the real-world ideas that I later tinker with as personal automation projects at home.</p>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="chip">Freight Forwarding</span>
+            <span class="chip">Operations Support</span>
+            <span class="chip">International</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PROJECTS ============== -->
+<section id="projects" class="relative py-20 sm:py-28 lg:py-32 border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 sm:mb-16 reveal">
+      <div>
+        <div class="section-label mb-6">03 / Personal Projects</div>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white leading-[1.1] tracking-tight safe-wrap">
+          Things I built <span class="italic bg-gradient-to-r from-accent-bright to-accent-violet bg-clip-text text-transparent">after work.</span>
+        </h2>
+      </div>
+      <p class="text-slate-400 max-w-md text-sm leading-relaxed safe-wrap">All four projects below are independent personal builds — created with AI assistance in my own time to solve operational pain points I noticed at work. Not official company software.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5 lg:gap-6">
+
+      <!-- Project 1 -->
+      <article class="reveal group relative rounded-2xl border border-white/10 bg-ink-900/50 backdrop-blur-sm p-6 sm:p-7 card-tilt overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent-bright/25 via-accent-violet/10 to-transparent rounded-bl-full"></div>
+        <div class="relative flex items-start justify-between mb-6">
+          <div class="w-12 h-12 rounded-lg bg-accent-bright/10 border border-accent-bright/30 grid place-items-center text-accent-bright">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+          </div>
+          <span class="font-mono text-[10px] text-slate-500 tracking-widest uppercase">P / 01</span>
+        </div>
+        <h3 class="font-display text-xl sm:text-2xl text-white leading-tight safe-wrap">BL Generator Tool</h3>
+        <div class="font-mono text-xs text-accent-bright mt-1 mb-4 tracking-wider safe-wrap">Personal Build · Electron · AI-Assisted</div>
+        <p class="text-slate-300 leading-relaxed safe-wrap">An independent personal project — an offline desktop app built with the Electron framework using AI-assisted coding. It generates Bills of Lading quickly. I made it for myself after spotting how repetitive the manual format was at work.</p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="chip">Personal Build</span>
+          <span class="chip">Electron</span>
+          <span class="chip">Offline-first</span>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="reveal group relative rounded-2xl border border-white/10 bg-ink-900/50 backdrop-blur-sm p-6 sm:p-7 card-tilt overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent-bright/25 via-accent-violet/10 to-transparent rounded-bl-full"></div>
+        <div class="relative flex items-start justify-between mb-6">
+          <div class="w-12 h-12 rounded-lg bg-accent-bright/10 border border-accent-bright/30 grid place-items-center text-accent-bright">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <span class="font-mono text-[10px] text-slate-500 tracking-widest uppercase">P / 02</span>
+        </div>
+        <h3 class="font-display text-xl sm:text-2xl text-white leading-tight safe-wrap">Quotation Generator</h3>
+        <div class="font-mono text-xs text-accent-bright mt-1 mb-4 tracking-wider safe-wrap">Personal Build · Electron</div>
+        <p class="text-slate-300 leading-relaxed safe-wrap">A custom desktop app built independently with Electron and AI assistance. It helps me practice and prototype a cleaner way to put together freight quotations — purely a learning project I work on at home.</p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="chip">Personal Build</span>
+          <span class="chip">Electron</span>
+          <span class="chip">Prototype</span>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="reveal group relative rounded-2xl border border-white/10 bg-ink-900/50 backdrop-blur-sm p-6 sm:p-7 card-tilt overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent-bright/25 via-accent-violet/10 to-transparent rounded-bl-full"></div>
+        <div class="relative flex items-start justify-between mb-6">
+          <div class="w-12 h-12 rounded-lg bg-accent-bright/10 border border-accent-bright/30 grid place-items-center text-accent-bright">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <span class="font-mono text-[10px] text-slate-500 tracking-widest uppercase">P / 03</span>
+        </div>
+        <h3 class="font-display text-xl sm:text-2xl text-white leading-tight safe-wrap">Simple Inventory System</h3>
+        <div class="font-mono text-xs text-accent-bright mt-1 mb-4 tracking-wider safe-wrap">Personal Build · Lightweight · Offline</div>
+        <p class="text-slate-300 leading-relaxed safe-wrap">A lightweight offline desktop tool I built on my own to learn how a basic stock and item-tracking ledger could work. Independently coded with AI assistance — a small, honest experiment, not production software.</p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="chip">Personal Build</span>
+          <span class="chip">Learning Project</span>
+          <span class="chip">Offline</span>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="reveal group relative rounded-2xl border border-white/10 bg-ink-900/50 backdrop-blur-sm p-6 sm:p-7 card-tilt overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent-bright/25 via-accent-violet/10 to-transparent rounded-bl-full"></div>
+        <div class="relative flex items-start justify-between mb-6">
+          <div class="w-12 h-12 rounded-lg bg-accent-bright/10 border border-accent-bright/30 grid place-items-center text-accent-bright">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M6 9v3a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9M12 15V9"/></svg>
+          </div>
+          <span class="font-mono text-[10px] text-slate-500 tracking-widest uppercase">P / 04</span>
+        </div>
+        <h3 class="font-display text-xl sm:text-2xl text-white leading-tight safe-wrap">Email × Google Sheets Automation</h3>
+        <div class="font-mono text-xs text-accent-bright mt-1 mb-4 tracking-wider safe-wrap">Personal Build · Make.com · No-Code</div>
+        <p class="text-slate-300 leading-relaxed safe-wrap">An independent personal workflow I put together on Make.com to teach myself no-code API integration. It connects an email inbox to Google Sheets and syncs data automatically — built solo, in my own time, with AI assistance for the trickier steps.</p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="chip">Personal Build</span>
+          <span class="chip">Make.com</span>
+          <span class="chip">No-Code</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SKILLS GRID ============== -->
+<section id="skills" class="relative py-20 sm:py-28 lg:py-32 border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+    <div class="reveal mb-12 sm:mb-16">
+      <div class="section-label mb-6">04 / Skills</div>
+      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white leading-[1.1] tracking-tight max-w-3xl safe-wrap">
+        What I do at work, <span class="italic bg-gradient-to-r from-accent-bright to-accent-violet bg-clip-text text-transparent">what I tinker with at home.</span>
+      </h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-6">
+      <!-- Industry skills -->
+      <div class="reveal rounded-2xl border border-white/10 bg-ink-900/50 backdrop-blur-sm p-6 sm:p-8 lg:p-10">
+        <div class="flex items-center justify-between mb-7 gap-3">
+          <div class="flex items-center gap-3 min-w-0">
+            <div class="w-10 h-10 rounded-lg bg-accent-bright/10 grid place-items-center text-accent-bright flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h3 class="font-display text-xl sm:text-2xl text-white safe-wrap">Industry (Day Job)</h3>
+          </div>
+          <span class="font-mono text-[10px] text-slate-500 tracking-widest uppercase flex-shrink-0">Operations</span>
+        </div>
+        <div class="space-y-3">
+          <div class="flex items-center justify-between py-3 border-b border-white/5 gap-3">
+            <span class="text-slate-200 safe-wrap">Logistics Operations Execution</span>
+            <span class="font-mono text-xs text-accent-bright flex-shrink-0">Daily</span>
+          </div>
+          <div class="flex items-center justify-between py-3 border-b border-white/5 gap-3">
+            <span class="text-slate-200 safe-wrap">Dispatch &amp; Coordination</span>
+            <span class="font-mono text-xs text-accent-bright flex-shrink-0">5+ yrs</span>
+          </div>
+          <div class="flex items-center justify-between py-3 border-b border-white/5 gap-3">
+            <span class="text-slate-200 safe-wrap">Freight Forwarding Exposure</span>
+            <span class="font-mono text-xs text-accent-bright flex-shrink-0">Current</span>
+          </div>
+          <div class="flex items-center justify-between py-3 gap-3">
+            <span class="text-slate-200 safe-wrap">Domestic Logistics</span>
+            <span class="font-mono text-xs text-accent-bright flex-shrink-0">2019–24</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech skills -->
+      <div class="reveal rounded-2xl border border-white/10 bg-ink-900/50 backdrop-blur-sm p-6 sm:p-8 lg:p-10">
+        <div class="flex items-center justify-between mb-7 gap-3">
+          <div class="flex items-center gap-3 min-w-0">
+            <div class="w-10 h-10 rounded-lg bg-accent-bright/10 grid place-items-center text-accent-bright flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="font-display text-xl sm:text-2xl text-white safe-wrap">Tech &amp; Tools (Hobby)</h3>
+          </div>
+          <span class="font-mono text-[10px] text-slate-500 tracking-widest uppercase flex-shrink-0">Self-Taught</span>
+        </div>
+        <div class="space-y-3">
+          <div class="flex items-center justify-between py-3 border-b border-white/5 gap-3">
+            <span class="text-slate-200 safe-wrap">AI-Assisted Coding</span>
+            <span class="font-mono text-xs text-accent-bright flex-shrink-0">Daily</span>
+          </div>
+          <div class="flex items-center justify-between py-3 border-b border-white/5 gap-3">
+            <span class="text-slate-200 safe-wrap">Electron Framework</span>
+            <span class="font-mono text-xs text-accent-bright flex-shrink-0">3 apps</span>
+          </div>
+          <div class="flex items-center justify-between py-3 border-b border-white/5 gap-3">
+            <span class="text-slate-200 safe-wrap">Make.com — Workflow Automation</span>
+            <span class="font-mono text-xs text-accent-bright flex-shrink-0">No-Code</span>
+          </div>
+          <div class="flex items-center justify-between py-3 border-b border-white/5 gap-3">
+            <span class="text-slate-200 safe-wrap">HTML · CSS · JavaScript</span>
+            <span class="font-mono text-xs text-accent-bright flex-shrink-0">Learning</span>
+          </div>
+          <div class="flex items-center justify-between py-3 gap-3">
+            <span class="text-slate-200 safe-wrap">Google Workspace Integrations</span>
+            <span class="font-mono text-xs text-accent-bright flex-shrink-0">Sheets · APIs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== RESUME SHEET ============== -->
+<section id="resume" class="relative py-20 sm:py-28 lg:py-32 border-t border-white/5 bg-ink-900/30">
+  <div class="absolute inset-0 bg-grid opacity-30"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10 sm:mb-12 reveal">
+      <div>
+        <div class="section-label mb-6">05 / Resume</div>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white leading-[1.1] tracking-tight safe-wrap">
+          The printable <span class="italic bg-gradient-to-r from-accent-bright to-accent-violet bg-clip-text text-transparent">version.</span>
+        </h2>
+        <p class="text-slate-400 mt-4 max-w-xl safe-wrap">Edit any field directly, then export a clean A4 PDF.</p>
+      </div>
+
+      <div class="flex flex-wrap gap-3 no-pdf">
+        <button id="editBtn" class="btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          <span id="editBtnLabel">Edit Resume</span>
+        </button>
+        <button id="downloadBtn" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download PDF
+        </button>
+      </div>
+    </div>
+
+    <!-- A4 styled resume -->
+    <div class="reveal mx-auto" style="max-width: 850px;">
+      <div id="resume-sheet" class="resume-sheet p-6 sm:p-10 md:p-14 rounded-lg sm:rounded-md">
+
+        <!-- Header -->
+        <header class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 pb-7 border-b-2 border-slate-900">
+          <div>
+            <h1 class="text-[36px] sm:text-5xl font-bold leading-[1.0] tracking-tight safe-wrap" contenteditable="false" data-field="name">Rajmani Tiwari</h1>
+            <p class="text-sm sm:text-lg mt-3 text-slate-700 safe-wrap" contenteditable="false" data-field="title">Logistics Operations Executive &amp; Self-Taught Automation Explorer</p>
+          </div>
+          <div class="text-sm space-y-1 text-slate-700 sm:text-right safe-wrap" style="font-family: 'JetBrains Mono', monospace; font-size: 12px;">
+            <div>📞 <span contenteditable="false" data-field="phone">9696301338</span></div>
+            <div>✉ <span contenteditable="false" data-field="email">sangamtiwari5163@gmail.com</span></div>
+            <div>🔗 <a href="https://www.linkedin.com/in/rajmani-tiwari-061882305" target="_blank" rel="noopener" class="hover:text-blue-700"><span contenteditable="false" data-field="linkedin">linkedin.com/in/rajmani-tiwari-061882305</span></a></div>
+            <div>🌐 <span contenteditable="false" data-field="lang">Hindi / English</span></div>
+          </div>
+        </header>
+
+        <!-- Profile -->
+        <section class="mt-7">
+          <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-blue-700 mb-3" style="font-family: 'JetBrains Mono', monospace;">Profile</h2>
+          <p class="text-[14.5px] leading-relaxed text-slate-800 safe-wrap" contenteditable="false" data-field="profile">Logistics Operations Executive with 7+ years of hands-on experience in domestic and international logistics operations. A self-taught automation hobbyist who, in personal time, uses AI assistance to build small Electron desktop apps and no-code Make.com workflows. Curious, patient, and motivated by solving real operational pain points encountered at work.</p>
+        </section>
+
+        <!-- Two columns -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-7">
+
+          <!-- Left col: Experience + Projects -->
+          <div class="sm:col-span-2 space-y-7">
+
+            <section>
+              <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-blue-700 mb-4" style="font-family: 'JetBrains Mono', monospace;">Experience</h2>
+
+              <div class="mb-5">
+                <div class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 class="font-semibold text-[15.5px] text-slate-900 safe-wrap" contenteditable="false" data-field="job1-title">Operations Executive</h3>
+                  <span class="text-[12px] text-slate-500 font-mono" contenteditable="false" data-field="job1-date">2024 — Present</span>
+                </div>
+                <div class="text-[13px] text-slate-700 italic mt-0.5 safe-wrap" contenteditable="false" data-field="job1-co">Joy Logistics Exim (India) Pvt. Ltd. · New Delhi</div>
+                <p class="text-[13.5px] text-slate-700 mt-1.5 leading-relaxed safe-wrap" contenteditable="false" data-field="job1-desc">Handling international freight forwarding and day-to-day operations support. Coordinating documentation, dispatch follow-ups, and cross-team communication in a standard operations role.</p>
+              </div>
+
+              <div>
+                <div class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 class="font-semibold text-[15.5px] text-slate-900 safe-wrap" contenteditable="false" data-field="job2-title">Logistics Operations Executive</h3>
+                  <span class="text-[12px] text-slate-500 font-mono" contenteditable="false" data-field="job2-date">2015 — 2020 · 5 Years</span>
+                </div>
+                <div class="text-[13px] text-slate-700 italic mt-0.5 safe-wrap" contenteditable="false" data-field="job2-co">Surgeet Logistics · Kanpur</div>
+                <p class="text-[13.5px] text-slate-700 mt-1.5 leading-relaxed safe-wrap" contenteditable="false" data-field="job2-desc">Worked at a small state-level domestic logistics company. Managed local cargo movements and dispatch coordination — built the operational foundation that later inspired my personal automation projects.</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-blue-700 mb-4" style="font-family: 'JetBrains Mono', monospace;">Personal Projects</h2>
+              <p class="text-[12px] text-slate-600 italic mb-3 safe-wrap" contenteditable="false" data-field="proj-context">Independent builds created in personal time with AI assistance — not official company software.</p>
+              <ul class="space-y-3">
+                <li>
+                  <div class="font-semibold text-[14.5px] text-slate-900 safe-wrap" contenteditable="false" data-field="proj1-title">BL Generator Tool</div>
+                  <p class="text-[13px] text-slate-700 leading-relaxed safe-wrap" contenteditable="false" data-field="proj1-desc">Independent offline desktop app built with the Electron framework using AI-assisted coding to generate Bills of Lading quickly. Personal project.</p>
+                </li>
+                <li>
+                  <div class="font-semibold text-[14.5px] text-slate-900 safe-wrap" contenteditable="false" data-field="proj2-title">Quotation Generator</div>
+                  <p class="text-[13px] text-slate-700 leading-relaxed safe-wrap" contenteditable="false" data-field="proj2-desc">Custom desktop app built independently with Electron and AI assistance to prototype a cleaner freight-quotation workflow. Personal learning project.</p>
+                </li>
+                <li>
+                  <div class="font-semibold text-[14.5px] text-slate-900 safe-wrap" contenteditable="false" data-field="proj3-title">Simple Inventory System</div>
+                  <p class="text-[13px] text-slate-700 leading-relaxed safe-wrap" contenteditable="false" data-field="proj3-desc">Lightweight offline desktop tool I built on my own to learn how a basic stock and item-tracking ledger could work. Independent build.</p>
+                </li>
+                <li>
+                  <div class="font-semibold text-[14.5px] text-slate-900 safe-wrap" contenteditable="false" data-field="proj4-title">Make.com Automation</div>
+                  <p class="text-[13px] text-slate-700 leading-relaxed safe-wrap" contenteditable="false" data-field="proj4-desc">Personal Make.com workflow connecting an email inbox to Google Sheets — built in own time to learn no-code API integration.</p>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <!-- Right col: Education + Skills + Languages -->
+          <div class="space-y-7">
+
+            <section>
+              <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-blue-700 mb-3" style="font-family: 'JetBrains Mono', monospace;">Education</h2>
+              <div class="text-[13.5px] text-slate-800 space-y-2.5">
+                <div>
+                  <div class="font-semibold safe-wrap" contenteditable="false" data-field="edu1-title">10th</div>
+                  <div class="text-[12.5px] text-slate-600" contenteditable="false" data-field="edu1-date">Passed · 2010</div>
+                </div>
+                <div>
+                  <div class="font-semibold safe-wrap" contenteditable="false" data-field="edu2-title">12th — Science (PCM)</div>
+                  <div class="text-[12.5px] text-slate-600" contenteditable="false" data-field="edu2-date">Passed · 2012</div>
+                </div>
+                <div>
+                  <div class="font-semibold safe-wrap" contenteditable="false" data-field="edu3-title">Bachelor of Arts (B.A.)</div>
+                  <div class="text-[12.5px] text-slate-600" contenteditable="false" data-field="edu3-date">2012 — 2015 · Graduate</div>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-blue-700 mb-3" style="font-family: 'JetBrains Mono', monospace;">Industry Skills</h2>
+              <ul id="industrySkillsList" class="text-[13.5px] text-slate-800 space-y-1.5">
+                <li class="safe-wrap" contenteditable="false" data-field="ind1">• Logistics Operations</li>
+                <li class="safe-wrap" contenteditable="false" data-field="ind2">• Dispatch &amp; Coordination</li>
+                <li class="safe-wrap" contenteditable="false" data-field="ind3">• Freight Forwarding Exposure</li>
+                <li class="safe-wrap" contenteditable="false" data-field="ind4">• Documentation Support</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-blue-700 mb-3" style="font-family: 'JetBrains Mono', monospace;">Tech &amp; Tools (Hobby)</h2>
+              <ul id="techSkillsList" class="text-[13.5px] text-slate-800 space-y-1.5">
+                <li class="safe-wrap" contenteditable="false" data-field="tech1">• AI-Assisted Coding</li>
+                <li class="safe-wrap" contenteditable="false" data-field="tech2">• Electron Framework</li>
+                <li class="safe-wrap" contenteditable="false" data-field="tech3">• Make.com (No-Code Automation)</li>
+                <li class="safe-wrap" contenteditable="false" data-field="tech4">• HTML / CSS / JavaScript</li>
+                <li class="safe-wrap" contenteditable="false" data-field="tech5">• Google Workspace Integrations</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-blue-700 mb-3" style="font-family: 'JetBrains Mono', monospace;">Languages</h2>
+              <div class="text-[13.5px] text-slate-800 safe-wrap" contenteditable="false" data-field="lang2">Hindi · English</div>
+            </section>
+          </div>
+        </div>
+
+        <!-- Footer line -->
+        <div class="mt-10 pt-5 border-t border-slate-200 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+          <span>RAJMANI TIWARI · RESUME</span>
+          <span>2026</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== CONTACT ============== -->
+<section id="contact" class="relative py-20 sm:py-28 lg:py-32 border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-20">
+
+      <div class="lg:col-span-5 reveal">
+        <div class="section-label mb-6">06 / Contact</div>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white leading-[1.1] tracking-tight safe-wrap">
+          Open to a <span class="italic bg-gradient-to-r from-accent-bright to-accent-violet bg-clip-text text-transparent">good conversation.</span>
+        </h2>
+        <p class="text-slate-400 mt-6 leading-relaxed safe-wrap">Always happy to hear from people in logistics, fellow self-taught builders, or anyone curious about no-code automation. Drop a message — I'll reply when I can.</p>
+
+        <div class="mt-10 space-y-4">
+          <a href="mailto:sangamtiwari5163@gmail.com" class="flex items-center gap-4 group">
+            <div class="w-12 h-12 rounded-xl border border-white/10 bg-ink-900/40 grid place-items-center text-accent-bright group-hover:border-accent-bright group-hover:bg-accent-bright/10 group-hover:shadow-lg group-hover:shadow-accent-bright/20 transition-all flex-shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="min-w-0">
+              <div class="text-[11px] font-mono text-slate-500 uppercase tracking-widest">Email</div>
+              <div class="text-white safe-wrap">sangamtiwari5163@gmail.com</div>
+            </div>
+          </a>
+          <a href="tel:+919696301338" class="flex items-center gap-4 group">
+            <div class="w-12 h-12 rounded-xl border border-white/10 bg-ink-900/40 grid place-items-center text-accent-bright group-hover:border-accent-bright group-hover:bg-accent-bright/10 group-hover:shadow-lg group-hover:shadow-accent-bright/20 transition-all flex-shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="min-w-0">
+              <div class="text-[11px] font-mono text-slate-500 uppercase tracking-widest">Phone</div>
+              <div class="text-white safe-wrap">+91 96963 01338</div>
+            </div>
+          </a>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl border border-white/10 bg-ink-900/40 grid place-items-center text-accent-bright flex-shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="min-w-0">
+              <div class="text-[11px] font-mono text-slate-500 uppercase tracking-widest">Based In</div>
+              <div class="text-white safe-wrap">Delhi, India</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 flex gap-3">
+          <a href="https://www.linkedin.com/in/rajmani-tiwari-061882305" data-social="linkedin" target="_blank" rel="noopener" class="w-11 h-11 rounded-xl border border-white/10 bg-ink-900/40 grid place-items-center text-slate-300 hover:text-accent-bright hover:border-accent-bright hover:bg-accent-bright/10 hover:shadow-lg hover:shadow-accent-bright/20 transition-all" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </a>
+          <a href="#" data-social="github-placeholder" target="_blank" rel="noopener" class="w-11 h-11 rounded-xl border border-white/10 bg-ink-900/40 grid place-items-center text-slate-300 hover:text-accent-bright hover:border-accent-bright hover:bg-accent-bright/10 hover:shadow-lg hover:shadow-accent-bright/20 transition-all" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.27-.01-1-.02-1.95-3.2.69-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14 0 1.54-.01 2.78-.01 3.16 0 .31.21.67.8.55C20.21 21.38 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+          </a>
+          <a href="mailto:sangamtiwari5163@gmail.com" data-social="email" class="w-11 h-11 rounded-xl border border-white/10 bg-ink-900/40 grid place-items-center text-slate-300 hover:text-accent-bright hover:border-accent-bright hover:bg-accent-bright/10 hover:shadow-lg hover:shadow-accent-bright/20 transition-all" aria-label="Email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 reveal">
+        <form id="contactForm" class="rounded-2xl border border-white/10 bg-ink-900/50 backdrop-blur-sm p-6 sm:p-7 md:p-9 space-y-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label for="cf-name" class="block text-[11px] font-mono text-slate-400 uppercase tracking-widest mb-2">Your Name</label>
+              <input id="cf-name" name="name" type="text" required class="w-full bg-ink-950 border border-white/10 rounded-md px-4 py-3 text-white placeholder-slate-500 focus:border-accent-bright focus:outline-none focus:ring-1 focus:ring-accent-bright transition" placeholder="Jane Doe"/>
+            </div>
+            <div>
+              <label for="cf-email" class="block text-[11px] font-mono text-slate-400 uppercase tracking-widest mb-2">Your Email</label>
+              <input id="cf-email" name="email" type="email" required class="w-full bg-ink-950 border border-white/10 rounded-md px-4 py-3 text-white placeholder-slate-500 focus:border-accent-bright focus:outline-none focus:ring-1 focus:ring-accent-bright transition" placeholder="you@company.com"/>
+            </div>
+          </div>
+          <div>
+            <label for="cf-subject" class="block text-[11px] font-mono text-slate-400 uppercase tracking-widest mb-2">Subject</label>
+            <input id="cf-subject" name="subject" type="text" class="w-full bg-ink-950 border border-white/10 rounded-md px-4 py-3 text-white placeholder-slate-500 focus:border-accent-bright focus:outline-none focus:ring-1 focus:ring-accent-bright transition" placeholder="Project / role / collaboration"/>
+          </div>
+          <div>
+            <label for="cf-message" class="block text-[11px] font-mono text-slate-400 uppercase tracking-widest mb-2">Message</label>
+            <textarea id="cf-message" name="message" rows="5" required class="w-full bg-ink-950 border border-white/10 rounded-md px-4 py-3 text-white placeholder-slate-500 focus:border-accent-bright focus:outline-none focus:ring-1 focus:ring-accent-bright transition resize-none" placeholder="Tell me what you're working on..."></textarea>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-3 pt-2 text-xs">
+            <div class="rounded-md bg-ink-950/60 border border-white/5 px-4 py-3">
+              <div class="font-mono text-[10px] text-slate-500 uppercase tracking-widest">Pre-filled · Recipient</div>
+              <div class="text-slate-200 mt-1 safe-wrap">sangamtiwari5163@gmail.com</div>
+            </div>
+            <div class="rounded-md bg-ink-950/60 border border-white/5 px-4 py-3">
+              <div class="font-mono text-[10px] text-slate-500 uppercase tracking-widest">Alt · Direct Call</div>
+              <div class="text-slate-200 mt-1 safe-wrap">+91 96963 01338</div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary w-full justify-center !py-3.5">
+            Send Message
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <div id="formStatus" class="hidden text-sm text-emerald-400 text-center"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="border-t border-white/5 py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+    <div class="font-mono text-xs text-slate-500 uppercase tracking-widest">© 2026 Rajmani Tiwari · Crafted with intention</div>
+    <div class="font-mono text-xs text-slate-500 uppercase tracking-widest">Operations · Self-Taught Builder</div>
+  </div>
+</footer>
+
+</main>
+
+<script>
+/* =============== INTERACTIONS =============== */
+
+// Mobile menu
+const menuBtn = document.getElementById('menuBtn');
+const menuIcon = document.getElementById('menuIcon');
+const mobileMenu = document.getElementById('mobileMenu');
+const HAMBURGER_SVG = '<path d="M4 6h16M4 12h16M4 18h16"/>';
+const CLOSE_SVG = '<path d="M6 6l12 12M18 6L6 18"/>';
+menuBtn?.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  if (menuIcon) menuIcon.innerHTML = isOpen ? CLOSE_SVG : HAMBURGER_SVG;
+});
+mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mobileMenu.classList.remove('open');
+  if (menuIcon) menuIcon.innerHTML = HAMBURGER_SVG;
+}));
+
+// Reveal on scroll — opt-in animation that NEVER hides content if JS fails.
+// Strategy: by default content is visible (.reveal alone shows it). Animation
+// only kicks in when we add 'reveal-anim' class. If IntersectionObserver
+// isn't supported or fails, content stays visible — no permanent invisibility.
+(function setupReveal() {
+  const els = document.querySelectorAll('.reveal');
+  if (!els.length) return;
+
+  // If IntersectionObserver isn't available (very old browsers), do nothing —
+  // .reveal already shows content by default.
+  if (typeof IntersectionObserver === 'undefined') return;
+
+  try {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    // Opt each element into animation, then observe it
+    els.forEach(el => {
+      el.classList.add('reveal-anim');
+      io.observe(el);
+    });
+
+    // Safety net: after 3 seconds, force-show anything that's still hidden
+    // (catches cases where observer never fires due to layout edge cases).
+    setTimeout(() => {
+      document.querySelectorAll('.reveal-anim:not(.in)').forEach(el => {
+        el.classList.add('in');
+      });
+    }, 3000);
+  } catch (_) {
+    // If anything fails, content remains visible thanks to default .reveal CSS
+  }
+})();
+
+/* =============== RESUME EDIT MODE =============== */
+const editBtn = document.getElementById('editBtn');
+const editBtnLabel = document.getElementById('editBtnLabel');
+const resumeSheet = document.getElementById('resume-sheet');
+let editMode = false;
+
+editBtn.addEventListener('click', () => {
+  editMode = !editMode;
+  const fields = resumeSheet.querySelectorAll('[data-field]');
+  fields.forEach(f => f.setAttribute('contenteditable', editMode ? 'true' : 'false'));
+  editBtnLabel.textContent = editMode ? 'Done Editing' : 'Edit Resume';
+  editBtn.classList.toggle('!border-accent-bright', editMode);
+  editBtn.classList.toggle('!text-accent-bright', editMode);
+  if (editMode) {
+    const first = fields[0];
+    first?.focus();
+    resumeSheet.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+});
+
+/* =============== DOWNLOAD PDF =============== */
+
+const downloadBtn = document.getElementById('downloadBtn');
+
+/* ============================================================
+ * DOWNLOAD PDF — Native browser print.
+ *
+ * Why this approach: html2pdf / html2canvas fail on many mobile
+ * browsers (blank canvas, iOS Safari blocks blob downloads, memory
+ * limits on Android Chrome at scale:2). Native print, by contrast,
+ * works on EVERY device — the browser renders the page using the
+ * @media print CSS rules and lets the user save as PDF.
+ *
+ * Flow:
+ *   1. If editing, finalize edit mode so latest values are reflected.
+ *   2. Read every editable field from the live resume sheet.
+ *   3. Open a NEW isolated browser window/tab.
+ *   4. Write a self-contained, A4-pixel-perfect HTML document into it
+ *      (no Tailwind, no aurora UI, no parent viewport — just a clean
+ *      single-column-and-sidebar A4 resume sized 794×1123px).
+ *   5. Auto-trigger print() in that window. User picks "Save as PDF".
+ *
+ * Why this beats simple window.print() on mobile:
+ *   Mobile browsers (Chrome Android especially) split @media print
+ *   output by mobile viewport height instead of A4. That's why an
+ *   A4-worth of content was spanning 8 "pages" of mostly white space.
+ *   A dedicated window with explicit A4 CSS removes this entirely.
+ * ============================================================ */
+downloadBtn?.addEventListener('click', () => {
+  // Finalize edit mode so the printed copy reflects latest edits
+  if (typeof editMode !== 'undefined' && editMode && typeof editBtn !== 'undefined') {
+    editBtn.click();
+  }
+
+  // Safe text reader — returns '' on miss, never throws
+  const getField = (field) => {
+    try {
+      const el = document.querySelector(`#resume-sheet [data-field="${field}"]`);
+      return el ? (el.innerText || el.textContent || '').trim() : '';
+    } catch (_) { return ''; }
+  };
+
+  // Read skills list by walking <li> elements inside the container
+  const getList = (id) => {
+    const out = [];
+    const c = document.getElementById(id);
+    if (!c) return out;
+    c.querySelectorAll('li').forEach(li => {
+      const raw = (li.innerText || li.textContent || '').trim();
+      const clean = raw.replace(/^[•\-\*\u2022]\s*/, '').trim();
+      if (clean) out.push(clean);
+    });
+    return out;
+  };
+
+  // Pull every field from the live resume
+  const d = {
+    name:        getField('name'),
+    title:       getField('title'),
+    phone:       getField('phone'),
+    email:       getField('email'),
+    linkedin:    getField('linkedin'),
+    lang:        getField('lang'),
+    profile:     getField('profile'),
+    job1Title:   getField('job1-title'),
+    job1Date:    getField('job1-date'),
+    job1Co:      getField('job1-co'),
+    job1Desc:    getField('job1-desc'),
+    job2Title:   getField('job2-title'),
+    job2Date:    getField('job2-date'),
+    job2Co:      getField('job2-co'),
+    job2Desc:    getField('job2-desc'),
+    projContext: getField('proj-context'),
+    proj1Title:  getField('proj1-title'),
+    proj1Desc:   getField('proj1-desc'),
+    proj2Title:  getField('proj2-title'),
+    proj2Desc:   getField('proj2-desc'),
+    proj3Title:  getField('proj3-title'),
+    proj3Desc:   getField('proj3-desc'),
+    proj4Title:  getField('proj4-title'),
+    proj4Desc:   getField('proj4-desc'),
+    edu1Title:   getField('edu1-title'),
+    edu1Date:    getField('edu1-date'),
+    edu2Title:   getField('edu2-title'),
+    edu2Date:    getField('edu2-date'),
+    edu3Title:   getField('edu3-title'),
+    edu3Date:    getField('edu3-date'),
+    indSkills:   getList('industrySkillsList'),
+    techSkills:  getList('techSkillsList'),
+    lang2:       getField('lang2') || getField('lang')
+  };
+
+  const esc = (s) => String(s || '')
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+
+  // Build a clean, self-contained A4 HTML document.
+  // Everything inline. No Tailwind. No external CSS. No external fonts.
+  // A4 = 210mm × 297mm. Body sized to print as exactly ONE page.
+  const printHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rajmani_Tiwari_Resume</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #ffffff;
+    color: #1e293b;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 10pt;
+    line-height: 1.4;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .sheet {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 12mm 14mm;
+    background: #ffffff;
+    margin: 0 auto;
+  }
+  /* Header */
+  .hdr {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 6pt;
+    border-bottom: 1.5pt solid #1e293b;
+    margin-bottom: 8pt;
+  }
+  .hdr-l h1 {
+    font-family: Georgia, serif;
+    font-size: 22pt;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.3pt;
+    line-height: 1;
+  }
+  .hdr-l .role {
+    font-size: 10pt;
+    color: #475569;
+    margin-top: 3pt;
+    font-style: italic;
+  }
+  .hdr-r {
+    text-align: right;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 8.5pt;
+    color: #334155;
+    line-height: 1.55;
+  }
+  /* Section labels */
+  .lbl {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 2pt;
+    color: #1e40af;
+    text-transform: uppercase;
+    margin: 0 0 4pt 0;
+  }
+  /* Profile */
+  .profile {
+    font-size: 9.5pt;
+    line-height: 1.45;
+    color: #334155;
+    margin-bottom: 8pt;
+  }
+  /* Two-column body */
+  .body {
+    display: flex;
+    gap: 10mm;
+  }
+  .col-l { flex: 1.9; }
+  .col-r { flex: 1; }
+  /* Job/project entries */
+  .entry { margin-bottom: 6pt; }
+  .entry-hdr {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 6pt;
+  }
+  .entry-title {
+    font-family: Georgia, serif;
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .entry-date {
+    font-family: 'Consolas', monospace;
+    font-size: 8pt;
+    color: #64748b;
+    white-space: nowrap;
+  }
+  .entry-co {
+    font-size: 9pt;
+    color: #475569;
+    font-style: italic;
+    margin: 1pt 0 2pt 0;
+  }
+  .entry-desc {
+    font-size: 9pt;
+    line-height: 1.4;
+    color: #334155;
+  }
+  .proj-context {
+    font-size: 8.5pt;
+    color: #64748b;
+    font-style: italic;
+    margin-bottom: 4pt;
+  }
+  /* Right-column blocks */
+  .block { margin-bottom: 8pt; }
+  .edu-item { margin-bottom: 4pt; }
+  .edu-title {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.2;
+  }
+  .edu-date {
+    font-size: 8.5pt;
+    color: #64748b;
+  }
+  .skill {
+    font-size: 9pt;
+    color: #334155;
+    line-height: 1.55;
+  }
+  /* Footer */
+  .ftr {
+    margin-top: 10pt;
+    padding-top: 5pt;
+    border-top: 0.5pt solid #cbd5e1;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Consolas', monospace;
+    font-size: 7.5pt;
+    color: #64748b;
+    letter-spacing: 0.8pt;
+  }
+  /* Section spacing */
+  .section { margin-bottom: 8pt; }
+  @media screen {
+    body { background: #e2e8f0; padding: 20px 0; }
+    .sheet {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      border-radius: 2px;
+    }
+    .hint {
+      max-width: 210mm;
+      margin: 0 auto 16px auto;
+      padding: 12px 16px;
+      background: #0f172a;
+      color: #f1f5f9;
+      font-family: -apple-system, sans-serif;
+      font-size: 13px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .hint button {
+      background: #22d3ee;
+      color: #0f172a;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-left: 8px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+  }
+  @media print {
+    body { background: #ffffff; padding: 0; }
+    .sheet { box-shadow: none; border-radius: 0; }
+    .hint { display: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="hint">
+    📄 Tap the print icon &rarr; choose <b>"Save as PDF"</b> &rarr; Paper size: <b>A4</b>
+    <button onclick="window.print()">Print / Save PDF</button>
+  </div>
+  <div class="sheet">
+    <div class="hdr">
+      <div class="hdr-l">
+        <h1>${esc(d.name)}</h1>
+        <div class="role">${esc(d.title)}</div>
+      </div>
+      <div class="hdr-r">
+        <div>${esc(d.phone)}</div>
+        <div>${esc(d.email)}</div>
+        ${d.linkedin ? `<div>${esc(d.linkedin)}</div>` : ''}
+        <div>${esc(d.lang)}</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="lbl">Profile</div>
+      <div class="profile">${esc(d.profile)}</div>
+    </div>
+
+    <div class="body">
+      <div class="col-l">
+        <div class="section">
+          <div class="lbl">Experience</div>
+          <div class="entry">
+            <div class="entry-hdr">
+              <span class="entry-title">${esc(d.job1Title)}</span>
+              <span class="entry-date">${esc(d.job1Date)}</span>
+            </div>
+            <div class="entry-co">${esc(d.job1Co)}</div>
+            <div class="entry-desc">${esc(d.job1Desc)}</div>
+          </div>
+          <div class="entry">
+            <div class="entry-hdr">
+              <span class="entry-title">${esc(d.job2Title)}</span>
+              <span class="entry-date">${esc(d.job2Date)}</span>
+            </div>
+            <div class="entry-co">${esc(d.job2Co)}</div>
+            <div class="entry-desc">${esc(d.job2Desc)}</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="lbl">Personal Projects</div>
+          ${d.projContext ? `<div class="proj-context">${esc(d.projContext)}</div>` : ''}
+          ${[1,2,3,4].map(n => {
+            const t = d['proj'+n+'Title'], desc = d['proj'+n+'Desc'];
+            if (!t && !desc) return '';
+            return `<div class="entry">
+              <div class="entry-title">${esc(t)}</div>
+              <div class="entry-desc">${esc(desc)}</div>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>
+
+      <div class="col-r">
+        <div class="block">
+          <div class="lbl">Education</div>
+          ${[1,2,3].map(n => {
+            const t = d['edu'+n+'Title'], dt = d['edu'+n+'Date'];
+            if (!t) return '';
+            return `<div class="edu-item">
+              <div class="edu-title">${esc(t)}</div>
+              <div class="edu-date">${esc(dt)}</div>
+            </div>`;
+          }).join('')}
+        </div>
+
+        <div class="block">
+          <div class="lbl">Industry Skills</div>
+          ${d.indSkills.map(s => `<div class="skill">&bull; ${esc(s)}</div>`).join('')}
+        </div>
+
+        <div class="block">
+          <div class="lbl">Tech &amp; Tools</div>
+          ${d.techSkills.map(s => `<div class="skill">&bull; ${esc(s)}</div>`).join('')}
+        </div>
+
+        <div class="block">
+          <div class="lbl">Languages</div>
+          <div class="skill">${esc(d.lang2)}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ftr">
+      <div>RAJMANI TIWARI &middot; RESUME</div>
+      <div>2026</div>
+    </div>
+  </div>
+
+  <script>
+    // Auto-trigger print after a short delay so layout settles + fonts load
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        try { window.print(); } catch(_) {}
+      }, 350);
+    });
+  <\/script>
+</body>
+</html>`;
+
+  // Open in a new tab / window and inject the document
+  const w = window.open('', '_blank');
+  if (!w) {
+    alert('Please allow pop-ups for this site so the PDF can open.');
+    return;
+  }
+  w.document.open();
+  w.document.write(printHtml);
+  w.document.close();
+});
+
+
+/* =============== CONTACT FORM =============== */
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+contactForm?.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const name = contactForm.elements['name'].value.trim();
+  const email = contactForm.elements['email'].value.trim();
+  const subject = contactForm.elements['subject'].value.trim() || 'New message from portfolio';
+  const message = contactForm.elements['message'].value.trim();
+
+  // Build mailto link so it works without a backend
+  const body = encodeURIComponent(`From: ${name} <${email}>\n\n${message}`);
+  window.location.href = `mailto:sangamtiwari5163@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+  // Show confirmation
+  formStatus.textContent = 'Opening your mail app...';
+  formStatus.classList.remove('hidden');
+
+  // Reset the form AFTER the mailto handoff so values aren't lost mid-navigation.
+  // Some browsers cancel a synchronous reset() that runs in the same tick as a
+  // navigation; deferring it with a small timeout makes it reliable on
+  // Chrome/Android, iOS Safari, and desktop.
+  setTimeout(() => {
+    contactForm.reset();
+  }, 100);
+
+  setTimeout(() => formStatus.classList.add('hidden'), 4000);
+});
+
+/* =============== ACTIVE NAV LINK =============== */
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+const setActive = () => {
+  const scrollY = window.scrollY + 120;
+  sections.forEach(sec => {
+    const top = sec.offsetTop;
+    const h = sec.offsetHeight;
+    const id = sec.getAttribute('id');
+    if (scrollY >= top && scrollY < top + h) {
+      navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
+    }
+  });
+};
+window.addEventListener('scroll', setActive, { passive: true });
+</script>
+
+</body>
+</html>
